@@ -1,0 +1,30 @@
+body {
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(131, 131, 212, 1) 37%, rgba(0, 212, 255, 1) 100%);
+}
+
+.left-arrow {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.login-div {
+  background: var(--white);
+  width: 400px;
+}
+
+.login-form {
+  padding: 3rem;
+}
+
+@media screen and (max-width: 500px) {
+  .login-div {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .login-form {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

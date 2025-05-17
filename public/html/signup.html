@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeuVestido</title>
+  <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/public/css/style.css" rel="stylesheet">
+  <link href="/public/css/signup.css" rel="stylesheet">
+  <link href="/public/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-div">
+    <div class="col-sm-8 h-100 d-flex justify-content-sm-center align-items-center">
+      <!-- <img class="img-fluid object-fit-none" src="/public/images/slider-test2.png" alt=""> -->
+      <div class="shadow p-4">
+        <h1 class="text-light">Cadastre-se</h1>
+        <h1 class="text-light">E aproveite nossos serviços</h1>
+      </div>
+    </div>
+    <div class="col-sm-4 father-signup-div">
+      <div class="position-absolute ms-2 mt-2">
+        <img class="left-arrow" onclick="history.back()" src="/public/images/arrow-left.svg" alt="">
+      </div>
+      <div class="w-100 h-100 signup-div">
+        <form id="signup-form" class="signup-form" action="/signup" method="post">
+          <div class="mb-3 mt-2">
+            <label for="name" class="form-label">Nome:</label>
+            <input id="name" type="text" placeholder="Digite seu nome" required minlength="2" maxlength="50"
+              class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input id="email" type="email" placeholder="Digite seu e-mail" required class="form-control">
+            <p id="email-error" class="small text-danger ms-1 mt-1"></p>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha:</label>
+            <div class="d-flex justify-content-center align-items-center">
+              <input id="password" type="password" placeholder="Digite sua senha" required class="form-control">
+              <i id="toggle-password" class="btn btn-outline-success bi bi-eye-slash toggle-password "
+                style="cursor: pointer;"></i>
+            </div>
+            <div class="password-rules mt-2">
+              <div id="length-check" class="rule">
+                <i class="bi bi-dot"></i>
+                <span>Min. 8 caracteres</span>
+              </div>
+              <div id="numeric-check" class="rule">
+                <i class="bi bi-dot"></i>
+                <span>Ao menos 1 número</span>
+              </div>
+              <div id="upper-check" class="rule">
+                <i id="upper-icon" class="bi bi-dot"></i>
+                <span>Ao menos 1 letra maiúscula</span>
+              </div>
+              <div id="special-check" class="rule">
+                <i class="bi bi-dot"></i>
+                <span>Ao menos 1 caractere especial (!@#$...)</span>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password-confirmation" class="form-label">Confirme Senha:</label>
+            <input id="password-confirmation" type="password" placeholder="Confirme sua senha" required
+              class="form-control">
+            <p id="confirmation-password-error" class="small d-none ms-1 mt-1 text-danger">Senhas não conferem</p>
+            <p id="unexpected-error" class="small text-danger d-none">Um erro inesperado ocorreu</p>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success mt-2 mb-2" type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="/public/js/signup-listeners.js"></script>
+
+</html>

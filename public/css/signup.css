@@ -1,0 +1,84 @@
+body {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(131, 131, 212, 1) 45%, rgba(0, 212, 255, 1) 100%);
+}
+
+.main-div {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.father-signup-div {
+  height: 100vh;
+}
+
+.left-arrow {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.signup-div {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form {
+  width: 75%;
+}
+
+.password-rules {
+  font-size: 0.9rem;
+  color: #6c757d;
+  padding-left: 0.25rem;
+}
+
+.password-rules .rule {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.password-rules .rule::before {
+  content: "•";
+  font-size: 1.2rem;
+  color: #198754;
+}
+
+@media screen and (max-width: 1366px) {
+  .father-signup-div {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .left-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-div {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .father-signup-div {
+    height: 100%;
+  }
+
+  .signup-div {
+    align-items: normal;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .signup-form {
+    width: 300px;
+  }
+}

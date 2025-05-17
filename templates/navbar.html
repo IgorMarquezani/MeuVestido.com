@@ -1,0 +1,46 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mb-2 mb-lg-0 justify-content-center align-items-center">
+          <div class="nav-item">
+            <h3 style="font-style: italic;">
+              <a class="nav-link active" aria-current="page" href="/">MeuVestido.Com</a>
+            </h3>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link active" href="/product-register">Anunciar</a>
+          </div>
+        </div>
+        <div class="d-flex mx-auto">
+          <div class="d-flex position-absolute start-50 translate-middle">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Pesquisar</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          {% if not user %}
+          <div class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/login">Entrar</a>
+          </div>
+          <div class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="/signup">Cadastrar</a>
+          </div>
+          {% else %}
+          <div class="d-flex nav-item justify-content-center align-items-center">
+            <a href="/profile" style="text-decoration: none;">
+              <i class="navbar-brand bi bi-person-circle"></i>
+            </a>
+            <a href="/profile" style="text-decoration: none; color: black;">{{ user.name }}</a>
+          </div>
+          {% endif %}
+          <div class="nav-item">
+            <a class="ms-3 navbar-brand" href="/cart">
+              <i class="bi bi-basket"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

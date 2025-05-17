@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produto - MeuVestido.Com</title>
+  <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/public/css/footer.css" rel="stylesheet">
+  <style>
+    #clickableDiv {
+      cursor: pointer;
+    }
+
+    .thumbnail-list img {
+      cursor: pointer;
+      max-width: 70px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    .main-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-options {
+      margin-top: 1rem;
+    }
+
+    .add-to-cart {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  {% include 'navbar.html' %}
+
+  <main class="container my-5">
+    <div class="row g-5">
+      <div class="col-md-6">
+        <div class="d-flex flex-row flex-wrap thumbnail-list mb-3">
+          <img src="/public/images/vestido_lateral_esquerda1.png" alt="Miniatura 1">
+          <img src="/public/images/vestido_lateral_esquerda4.png" alt="Miniatura 2">
+          <img src="/public/images/vestido_lateral_esquerda3.png" alt="Miniatura 3">
+          <img src="/public/images/vestido_provador.png" alt="Miniatura 4">
+        </div>
+        <div class="main-image">
+          <img src="vestido_provador.png" alt="Vestido principal" class="img-fluid shadow-sm" />
+        </div>
+      </div>
+
+      <div class="col-md-6 product-details">
+        <h2>Encanto Floral</h2>
+        <p class="description">
+          Vestido longo de alças finas e decotes retos. Ajustado no corpo e fluído na saia em cetim, com
+          fechamento em botões forrados nas costas. Elegante e minimalista, perfeito para ambientes formais ou
+          intimistas.
+        </p>
+        <p class="text-warning fw-bold">★★★★★ (133 avaliações)</p>
+        <p class="price h4">R$ 179,90 <span class="text-muted d-block small">(ou em até 5x de R$ 34,00 sem juros)</span>
+        </p>
+
+        <div class="product-options">
+          <p><strong>Tamanho M</strong></p>
+          <button class="btn btn-outline-secondary btn-sm">Tabela de Medidas</button>
+        </div>
+
+        <button class="btn btn-success w-100 add-to-cart">Adicionar à sacola</button>
+      </div>
+    </div>
+  </main>
+
+  {% include 'footer.html' %}
+
+  <script src="/public/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

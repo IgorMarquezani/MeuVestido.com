@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeuVestido</title>
+  <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/public/css/style.css" rel="stylesheet">
+  <link href="/public/css/login.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="card rounded login-div">
+      <div class="position-absolute ms-2 mt-2">
+        <img class="bg-light rounded left-arrow" onclick="history.back()" src="/public/images/arrow-left.svg" alt="">
+      </div>
+      <form id="login-form" class="login-form" action="/login" method="post">
+        <h1 class="text-center mb-3">Login</h1>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input id="email" type="email" required class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Senha:</label>
+          <input id="password" type="password" required class="form-control">
+          <p id="login-error" class="small text-danger"></p>
+        </div>
+        <div class="text-center">
+          <p>Não possui uma conta? <a href="/signup">Cadastre-se</a></p>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-success mt-2" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script src="/public/js/login-listeners.js"></script>
+
+</html>

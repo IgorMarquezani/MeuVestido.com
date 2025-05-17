@@ -1,0 +1,8 @@
+:root {
+  --dark-gray: #121212;
+  --white: white;
+}
+
+body {
+  background: var(--dark-gray);
+}
