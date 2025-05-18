@@ -32,19 +32,19 @@ class Authenticator:
         def wrapper(*args, **kwargs):
             key = request.cookies.get("_Secure1")
             if not key:
-                return func(*args, **kwargs)
+                return func(*args, **kwargs, user=None)
 
             session_repo = SessionRepo(database.db)
 
             s = session_repo.select_by_key(key)
             if not s:
-                return func(*args, **kwargs)
+                return func(*args, **kwargs, user=None)
 
             user_repo = UserRepo(database.db)
 
             u = user_repo.select_by_id(s.user_id)
             if not u:
-                return func(*args, **kwargs)
+                return func(*args, **kwargs, user=None)
 
             return func(*args, **kwargs, user=u)
 
